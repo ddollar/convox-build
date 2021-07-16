@@ -3,7 +3,6 @@ description: Build a Convox app
 author: Convox
 inputs:
   host:
-    required: false
     default: console.convox.com
   password:
     required: false
@@ -11,6 +10,8 @@ inputs:
     required: false
   app:
     required: true
+  external:
+    default: false
 outputs:
   release:
     description: Release ID
