@@ -10,8 +10,6 @@ inputs:
     required: false
   app:
     required: true
-  external:
-    default: false
 outputs:
   release:
     description: Release ID
