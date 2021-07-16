@@ -5,6 +5,8 @@ set -e
 [ -n "${INPUT_PASSWORD}" ] && export CONVOX_PASSWORD=${INPUT_PASSWORD}
 [ -n "${INPUT_RACK}" ] && export CONVOX_RACK=${INPUT_RACK}
 
+export DOCKER_BUILDKIT=1
+
 release=$(convox build --app "${INPUT_APP}" --external --id)
 
 echo "::set-output name=release::${release}"
